@@ -4,6 +4,7 @@ Custom Marlin firmware configurations for Creality Ender 3 with CR Touch auto be
 ## Documentation
 - [Flashing Instructions](flashing-instructions.md)
 - [Managing Configurations](managing-configurations.md)
+- [PlatformIO Setup](platformio-setup.md)
 
 ## Initial Setup
 
@@ -68,30 +69,14 @@ ls -la config
   - INI configuration files
   - Documentation
 
-## VSCode Setup
-1. Open VSCode
-2. File -> Open Folder
-3. Select the `Marlin-2.1.x` directory
+## Use PlatformIO to Compile Firmware
+1. See [PlatformIO Setup](platformio-setup.md)
 
 ## Configuration Management
 - Keep configurations in the `config` subdirectory
 - The path in `platformio.ini` is relative to the Marlin directory
 
-### Update platformio.ini
-Add the following to  `platformio.ini`:
-```ini
-[platformio]
-default_envs = STM32F103RET6_creality
 
-[env:STM32F103RET6_creality]
-platform = ststm32
-board = genericSTM32F103RE
-framework = arduino
-build_flags =
-    -DCONFIG_FILE=ender3/ender3-crtouch.ini
-    -DUSE_CONFIG_OVERRIDE
-board_build.offset = 0x8000
-```
 
 #### Create Configuration Override
 Create a new file `Configuration_override.h`:

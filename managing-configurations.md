@@ -93,11 +93,10 @@ cp -r Marlin/config ~/marlin-configs-backup/
 cp Marlin/config/ender3/ender3-crtouch.ini ~/marlin-configs-backup/
 ```
 
-## Best Practices
+## Learn from my mistakes
 1. Keep one configuration per file
-2. Use clear, descriptive filenames
-3. Comment all custom changes
-4. Test configurations in separate branches
-5. Maintain a backup of working configurations
-6. Document probe offsets and PID values
-7. Include printer-specific notes in comments
+2. Comment all custom changes
+3. Test configurations in separate branches
+4. Maintain a backup of working configurations
+5. Document probe offsets and PID values
+6. Include printer-specific notes in comments
